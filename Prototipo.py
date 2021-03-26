@@ -28,7 +28,7 @@ def dibujarTablero(tablero):
     for x in tablero:
         print(x)
 
-secuencia = [1, 2, 3, 1]
+secuencia = [1, 2, 3, 1, 2, 3]
 dibujarTablero(
     completarTableroEnOrden(
         secuencia, tableroVacio()
