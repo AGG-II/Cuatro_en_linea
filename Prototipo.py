@@ -19,16 +19,19 @@ def completarTableroEnOrden(secuencia, tablero):
     return tablero
 
 def soltarFichaEnColumna(ficha, columna, tablero):
-    for fila in  range(6, 0, -1):
-        if tablero[fila - 1][columna - 1] == 0:
-            tablero[fila - 1][columna - 1] = ficha
-            return tablero
+    if columna >= 1 and columna <= 7:
+        for fila in  range(6, 0, -1):
+            if tablero[fila - 1][columna - 1] == 0:
+                tablero[fila - 1][columna - 1] = ficha
+                return tablero
+    else:
+        print("Movimiento invalido, la columna ", columna ,"no existe.")        
 
 def dibujarTablero(tablero):
     for x in tablero:
         print(x)
 
-secuencia = [1, 2, 3, 1, 2, 3]
+secuencia = [1, 2, 3, 1, 2, 3, 8]
 dibujarTablero(
     completarTableroEnOrden(
         secuencia, tableroVacio()
