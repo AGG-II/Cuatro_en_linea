@@ -8,6 +8,25 @@ def tableroVacio():
             [0, 0, 0, 0, 0, 0, 0],        
     ]
 
+def contenidoColumna(nro_columna, tablero):
+    columna = []
+    for fila in tablero:
+        celda = fila[nro_columna - 1]
+        columna.append(celda)
+    return columna
+
+def contenidoFila(nro_fila, tablero):
+    return tablero[nro_fila - 1]
+
+def devolverColumnas(tablero):
+    columnas = []
+    for i in range(7, 0, -1):
+        columnas.append(contenidoColumna(i, tablero))
+    return columnas
+
+def devolverFilas(tablero):
+    return tablero
+
 def completarTableroEnOrden(secuencia, tablero):
     ficha = 1
     for i in secuencia:
