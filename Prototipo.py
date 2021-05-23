@@ -48,8 +48,11 @@ def soltarFichaEnColumna(ficha, columna, tablero):
 
 def dibujarTablero(tablero):
     for x in tablero:
-        print("|", x , "|")
-    print("+-----------------------+")
+        print("|    ", end = '')
+        for y in x:
+            print(y, "  ", end = '')
+        print("|")
+    print("+--------------------------------+")
 
 secuencia = [1, 2, 3, 1, 2, 3, 8]
 dibujarTablero(
