@@ -20,7 +20,7 @@ def contenidoFila(nro_fila, tablero):
 
 def devolverColumnas(tablero):
     columnas = []
-    for i in range(7, 0, -1):
+    for i in range(1, 8, 1):
         columnas.append(contenidoColumna(i, tablero))
     return columnas
 
@@ -54,7 +54,7 @@ def dibujarTablero(tablero):
         print("|")
     print("+--------------------------------+")
 
-secuencia = [1, 2, 3, 1, 2, 3, 8]
+secuencia = [1, 2, 3, 1, 2, 3]
 dibujarTablero(
     completarTableroEnOrden(
         secuencia, tableroVacio()
