@@ -5,4 +5,8 @@ rmv:
 
 scripts:
 
+<<<<<<< HEAD
   - python -m py.test
+=======
+  - python -m py.test
+>>>>>>> c04d2fa191f2eeac03fc12c4fce15f936c21a0aa
